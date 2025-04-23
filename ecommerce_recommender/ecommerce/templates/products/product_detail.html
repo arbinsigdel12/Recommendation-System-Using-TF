@@ -1,0 +1,43 @@
+{% extends "base_user.html" %}
+
+{% block content %}
+<div class="product-detail">
+    <h1>{{ product.name }}</h1>
+    <p><strong>Category:</strong> {{ product.category.name }}</p>
+    <p><strong>Price:</strong> ${{ product.price }}</p>
+    <p><strong>Description:</strong> {{ product.description }}</p>
+    
+    <div style="margin: 1rem 0;">
+        <a href="{% url 'add_to_cart' product.id %}" class="btn">Add to Cart</a>
+    </div>
+    
+    <h2>Reviews</h2>
+    {% if reviews %}
+        {% for review in reviews %}
+        <div style="border-bottom: 1px solid #ddd; padding: 0.5rem 0;">
+            <p><strong>{{ review.user.username }}</strong> - {{ review.rating }}/5</p>
+            <p>{{ review.comment }}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No reviews yet.</p>
+    {% endif %}
+    
+    <h2>Recommended Products</h2>
+    <div class="recommendations" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;">
+        {% for product in recommendations %}
+        <div class="product-card">
+            <h3>{{ product.name }}</h3>
+            <p>Category: {{ product.category.name }}</p>
+            <p>Price: ${{ product.price }}</p>
+            <div style="display: flex; gap: 1rem;">
+                <a href="{% url 'product_detail' product.id %}" class="btn">View Product</a>
+                <a href="{% url 'add_to_cart' product.id %}" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        {% empty %}
+        <p>No recommendations available.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base_user.html" %}
+
+{% block content %}
+<h1>Purchase History</h1>
+{% if purchases %}
+<table style="width: 100%;">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Review</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for purchase in purchases %}
+        <tr>
+            <td>{{ purchase.product.name }}</td>
+            <td>{{ purchase.quantity }}</td>
+            <td>${{ purchase.price }}</td>
+            <td>
+            {% if not purchase.already_reviewed %}
+                <a href="{% url 'add_review' purchase.product.id %}" class="btn">Add Review</a>
+            {% else %}
+                Reviewed
+            {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>You haven't made any purchases yet.</p>
+{% endif %}
+{% endblock %}

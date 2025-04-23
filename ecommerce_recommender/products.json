@@ -1,0 +1,62 @@
+{
+    "Tech": [
+        {"name": "Wireless Headphone", "description": "Stylish Wireless HeadPhone from Boat.", "price": 59.99},
+        {"name": "Smartphone", "description": "Latest smartphone with amazing features.", "price": 699.99},
+        {"name": "Laptop", "description": "High-performance laptop for work and gaming.", "price": 999.99},
+        {"name": "Smartwatch", "description": "Track your fitness with this sleek smartwatch.", "price": 199.99},
+        {"name": "Tablet", "description": "Portable tablet for entertainment and productivity.", "price": 299.99},
+        {"name": "Gaming Console", "description": "Next-gen gaming console for immersive play.", "price": 499.99},
+        {"name": "Bluetooth Speaker", "description": "Portable speaker with rich sound quality.", "price": 89.99},
+        {"name": "Camera", "description": "High-resolution camera for stunning photos.", "price": 599.99},
+        {"name": "Earphones", "description": "True wireless earphones with noise cancellation.", "price": 129.99},
+        {"name": "VR Headset", "description": "Immersive virtual reality headset.", "price": 399.99}
+    ],
+    "Food": [
+        {"name": "Organic Coffee", "description": "Rich and aromatic organic coffee beans.", "price": 14.99},
+        {"name": "Chocolate Box", "description": "Assorted chocolates in a premium gift box.", "price": 19.99},
+        {"name": "Olive Oil", "description": "Extra virgin olive oil for cooking.", "price": 12.99},
+        {"name": "Pasta Pack", "description": "Premium Italian pasta variety pack.", "price": 9.99},
+        {"name": "Honey Jar", "description": "Pure and natural wildflower honey.", "price": 15.99},
+        {"name": "Spice Set", "description": "Exotic spices for gourmet cooking.", "price": 24.99},
+        {"name": "Tea Collection", "description": "Assorted herbal and green teas.", "price": 17.99},
+        {"name": "Snack Box", "description": "Healthy snacks for on-the-go.", "price": 22.99},
+        {"name": "Baking Mix", "description": "Complete mix for homemade cakes.", "price": 8.99},
+        {"name": "Salsa Dip", "description": "Spicy and tangy salsa for chips.", "price": 6.99}
+    ],
+    "Car": [
+        {"name": "Car Wax", "description": "Premium car wax for a shiny finish.", "price": 29.99},
+        {"name": "Tire Cleaner", "description": "Cleans and shines car tires.", "price": 14.99},
+        {"name": "Seat Covers", "description": "Stylish seat covers for car interiors.", "price": 49.99},
+        {"name": "Car Mats", "description": "Durable floor mats for all-weather use.", "price": 39.99},
+        {"name": "Dash Cam", "description": "High-definition dashboard camera.", "price": 79.99},
+        {"name": "Air Freshener", "description": "Long-lasting car air freshener.", "price": 5.99},
+        {"name": "Car Vacuum", "description": "Portable vacuum for car cleaning.", "price": 34.99},
+        {"name": "Phone Holder", "description": "Universal car phone mount.", "price": 19.99},
+        {"name": "Tool Kit", "description": "Essential tools for car maintenance.", "price": 59.99},
+        {"name": "Jump Starter", "description": "Portable car battery jump starter.", "price": 89.99}
+    ],
+    "Cloths": [
+        {"name": "Denim Jacket", "description": "Stylish denim jacket for all seasons.", "price": 69.99},
+        {"name": "Cotton T-Shirt", "description": "Comfortable cotton t-shirt pack.", "price": 24.99},
+        {"name": "Formal Shirt", "description": "Elegant shirt for formal occasions.", "price": 39.99},
+        {"name": "Jeans", "description": "Classic blue jeans with a modern fit.", "price": 49.99},
+        {"name": "Sweater", "description": "Cozy wool sweater for winter.", "price": 59.99},
+        {"name": "Sneakers", "description": "Trendy sneakers Meant for everyday use.", "price": 79.99},
+        {"name": "Scarf", "description": "Soft and warm scarf for cold days.", "price": 19.99},
+        {"name": "Hat", "description": "Stylish cap for sun protection.", "price": 14.99},
+        {"name": "Socks Pack", "description": "Comfortable cotton socks set.", "price": 12.99},
+        {"name": "Belt", "description": "Leather belt with classic buckle.", "price": 29.99}
+    ],
+    "Furniture": [
+        {"name": "Sofa", "description": "Comfortable sofa for modern living rooms.", "price": 499.99},
+        {"name": "Dining Table", "description": "Wooden dining table for family meals.", "price": 299.99},
+        {"name": "Office Chair", "description": "Ergonomic chair for home offices.", "price": 149.99},
+        {"name": "Bookshelf", "description": "Sturdy bookshelf for organizing books.", "price": 129.99},
+        {"name": "Bed Frame", "description": "Modern bed frame with headboard.", "price": 349.99},
+        {"name": "Coffee Table", "description": "Sleek coffee table for living rooms.", "price": 99.99},
+        {"name": "Wardrobe", "description": "Spacious wardrobe for clothing storage.", "price": 399.99},
+        {"name": "Desk", "description": "Compact desk for small spaces.", "price": 119.99},
+        {"name": "Lamp", "description": "Stylish table lamp for ambiance.", "price": 39.99},
+        {"name": "Recliner", "description": "Comfortable recliner for relaxation.", "price": 249.99}
+    ]
+}

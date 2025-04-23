@@ -1,0 +1,23 @@
+{% extends "base_user.html" %}
+
+{% block content %}
+<h1>Add Review for {{ product.name }}</h1>
+<form method="post">
+    {% csrf_token %}
+    <div style="margin-bottom: 1rem;">
+        <label for="rating">Rating (1-5):</label>
+        <select id="rating" name="rating" required>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+    </div>
+    <div style="margin-bottom: 1rem;">
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" style="width: 100%;"></textarea>
+    </div>
+    <button type="submit" class="btn">Submit Review</button>
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base_admin.html" %}
+
+{% block content %}
+<h1>User Activity for {{ selected_user.username }}</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Timestamp</th>
+            <th>Action</th>
+            <th>Item</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for activity in activities %}
+        <tr>
+            <td>{{ activity.timestamp|date:"Y-m-d H:i" }}</td>
+            <td>{{ activity.get_action_display }}</td>
+            <td>{{ activity.product_name }}</td>
+            <td>{{ activity.category }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'admin_dashboard' %}" class="btn">Back to Dashboard</a>
+{% endblock %}

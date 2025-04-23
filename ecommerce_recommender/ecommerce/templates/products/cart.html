@@ -1,0 +1,62 @@
+{% extends "base_user.html" %}
+
+{% block content %}
+{% load custom_filters %}
+<h1>Your Cart</h1>
+{% if cart_items %}
+<table style="width: 100%; margin-bottom: 2rem;">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart_items %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ item.product.price }}</td>
+            <td>${{ item.product.price|mul:item.quantity }}</td>
+            <td><a href="{% url 'remove_from_cart' item.product.id %}" class="btn">Remove</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" style="text-align: right;"><strong>Total:</strong></td>
+            <td><strong>${{ total_price }}</strong></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+<div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+    <a href="{% url 'checkout' %}" class="btn">Checkout</a>
+    <a href="{% url 'product_list' %}" class="btn">Continue Shopping</a>
+</div>
+
+<h2>Recommended Products</h2>
+<div class="recommendations" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;">
+    {% for product in recommendations %}
+    <div class="product-card">
+        <h3>{{ product.name }}</h3>
+        <p>Category: {{ product.category.name }}</p>
+        <p>Price: ${{ product.price }}</p>
+        <div style="display: flex; gap: 1rem;">
+            <a href="{% url 'product_detail' product.id %}" class="btn">View Product</a>
+            <a href="{% url 'add_to_cart' product.id %}" class="btn">Add to Cart</a>
+        </div>
+    </div>
+    {% empty %}
+    <p>No recommendations available.</p>
+    {% endfor %}
+</div>
+{% else %}
+<p>Your cart is empty.</p>
+<a href="{% url 'product_list' %}" class="btn">Continue Shopping</a>
+{% endif %}
+{% endblock %}
